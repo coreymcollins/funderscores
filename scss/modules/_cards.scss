@@ -6,6 +6,10 @@
 .card {
 	background-color: $athens-gray;
 
+	@include breakpoint(large) {
+		margin-bottom: 0;
+	}
+
 	// Content.
 	p {
 		font-size: rem-calc(16);

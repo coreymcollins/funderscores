@@ -39,17 +39,23 @@
 
 	// Remove margins on buttons in menus.
 	.button {
+		letter-spacing: 0.07em;
 		margin-bottom: 0;
 	} // .button
 
 	// Link colors.
 	a {
+		border-bottom-width: rem-calc(2);
+		border-bottom-style: solid;
+		border-color: rgba($black, 0);
+		transition: all 0.2s ease-in-out;
 
 		@include breakpoint(large down) {
 			color: $black;
 		}
 
 		@include breakpoint(large) {
+			border-color: rgba($white, 0);
 			color: $white;
 		}
 
@@ -60,5 +66,21 @@
 				color: $white;
 			}
 		} // &.button
+
+		// Not buttons.
+		&:not(.button) {
+
+			&:hover,
+			&:focus,
+			&:active,
+			&.current {
+				border-color: rgba($black, 1);
+
+				@include breakpoint(large) {
+					border-color: rgba($white, 1);
+				}
+			} // &:hover, &:focus, &:active, &.current
+		} // &:not(.button)
+		// Hovers and actives.
 	} // a
 } // .navigation-menu
