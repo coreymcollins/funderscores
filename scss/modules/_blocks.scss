@@ -13,7 +13,11 @@ main {
 
 		// The following block...
 		+ .block {
-			margin-top: rem-calc(100);
+			margin-top: rem-calc(60);
+
+			@include breakpoint(large) {
+				margin-top: rem-calc(100);
+			}
 		} // + .block
 	} // .block
 } // main

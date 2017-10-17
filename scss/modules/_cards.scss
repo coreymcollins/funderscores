@@ -10,6 +10,10 @@
 		margin-bottom: 0;
 	}
 
+	&:last-child {
+		margin-bottom: 0;
+	} // &:last-child
+
 	// Content.
 	p {
 		font-size: rem-calc(16);

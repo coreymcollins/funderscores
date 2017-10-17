@@ -64,9 +64,13 @@ p {
 			background-color: $curious-blue;
 			content: '';
 			display: block;
-			height: rem-calc(5);
+			height: rem-calc(3);
 			margin-bottom: rem-calc(14);
 			width: rem-calc(77);
+
+			@include breakpoint(large) {
+				height: rem-calc(5);
+			}
 		} // &::before
 	} // &--with-top-border
 } // .title

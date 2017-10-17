@@ -26,6 +26,14 @@
 			order: unset;
 			text-align: unset;
 		}
-	}
+	} // &__image
+
+	// Content.
+	p {
+
+		@include breakpoint(medium down) {
+			font-size: rem-calc(16);
+		}
+	} // p
 } // .block-fifty-fifty__image\
 
