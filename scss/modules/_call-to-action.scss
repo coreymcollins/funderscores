@@ -23,6 +23,23 @@
 			margin: 0;
 			padding: rem-calc(8) rem-calc(140) rem-calc(8) rem-calc(35);
 		}
+
+		// All the placeholders.
+		&::-webkit-input-placeholder {
+			color: $nevada;
+		}
+
+		&::-moz-placeholder {
+			color: $nevada;
+		}
+
+		&:-ms-input-placeholder {
+			color: $nevada;
+		}
+
+		&:-moz-placeholder {
+			color: $nevada;
+		}
 	} // input[type="email"]
 
 	// The button!
