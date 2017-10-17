@@ -1,0 +1,72 @@
+//--------------------------------------------------------------
+// Global Type Styles
+//--------------------------------------------------------------
+
+// We could change these in settings... but that only applies to the actual heading tag, not classes.
+// So for the sake of ease of use, we'll just update everything here at once.
+h1,
+.h1 {
+	font-size: rem-calc(84);
+} // h1, .h1
+
+h2,
+.h2 {
+	font-size: rem-calc(34);
+
+	@include breakpoint(large) {
+		font-size: rem-calc(74);
+	}
+} // h2, .h2
+
+h3,
+.h3 {
+	font-size: rem-calc(24);
+
+	@include breakpoint(large) {
+		font-size: rem-calc(42);
+	}
+} // h3, .h3
+
+h4,
+.h4 {
+	font-size: rem-calc(22);
+} // h4, .h4
+
+h1,
+.h1
+,h2,
+.h2
+,h3,
+.h3
+,h4,
+.h4 {
+	color: $scorpion;
+	font-family: 'Droid Serif', serif;
+}
+
+p {
+	color: $scorpion;
+	font-size: rem-calc(18);
+}
+
+
+//-----------------------------------------
+// Fancy Heading Styles
+//-----------------------------------------
+.title {
+
+	// A border above the title.
+	&--with-top-border {
+		position: relative;
+
+		// Add the top border.
+		&::before {
+			background-color: $curious-blue;
+			content: '';
+			display: block;
+			height: rem-calc(5);
+			margin-bottom: rem-calc(14);
+			width: rem-calc(77);
+		} // &::before
+	} // &--with-top-border
+} // .title

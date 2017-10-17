@@ -1,0 +1,19 @@
+//--------------------------------------------------------------
+// Global Block Styles
+//--------------------------------------------------------------
+.block--full-width {
+	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+} // .block--full-width
+
+// Block spacing.
+main {
+
+	.block {
+
+		// The following block...
+		+ .block {
+			margin-top: rem-calc(60);
+		} // + .block
+	} // .block
+} // main

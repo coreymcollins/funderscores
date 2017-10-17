@@ -1,0 +1,78 @@
+//--------------------------------------------------------------
+// Hero
+//--------------------------------------------------------------
+.block-hero {
+	background-position: 73% 50%;
+	height: rem-calc(766, 16);
+	margin-bottom: rem-calc(60);
+	position: relative;
+	text-align: center;
+
+	@include breakpoint(large) {
+		background-position: center center;
+		height: rem-calc(950, 16);
+		margin-bottom: rem-calc(100);
+		text-align: left;
+	}
+
+	// Adds the overlay.
+	&::before {
+		background-color: rgba(45,73,115,0.1);
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	} // &::before
+
+	// Container.
+	.grid-container {
+		height: 100%;
+		position: relative;
+		z-index: 2;
+	} // .grid-container
+
+	// Hero inner container width.
+	.cell {
+		max-width: 100%;
+		padding: $global-padding;
+	} // .cell
+
+	// Heading space.
+	h2 {
+		margin-bottom: rem-calc(34);
+	} // h2
+
+	// Hero content.
+	p {
+		font-size: rem-calc(22);
+		line-height: 1.4;
+		margin-bottom: rem-calc(72);
+
+		@include breakpoint(large) {
+			font-size: rem-calc(24);
+		}
+	} // p
+
+	// Button font sizes.
+	.button {
+		display: block;
+		font-size: rem-calc(18);
+		padding: rem-calc(20) rem-calc(44);
+
+		@include breakpoint(medium) {
+			display: inline-block;
+		}
+	} // .button
+
+	// Button spacing.
+	.button:not(:last-child) {
+
+		@include breakpoint(medium) {
+			margin-right: $global-margin;
+		}
+	} // .button:not(:last-child)
+} // .block-hero

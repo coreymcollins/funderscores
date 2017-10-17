@@ -1,0 +1,14 @@
+//--------------------------------------------------------------
+// Site Header
+//--------------------------------------------------------------
+
+.site-header {
+	position: absolute;
+	width: 100%;
+	z-index: 20;
+
+	// Top bar positioning.
+	.top-bar {
+		padding: rem-calc(30px, 16) rem-calc($global-padding, 16);
+	} // .top-bar
+} // .site-header

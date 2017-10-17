@@ -1,0 +1,19 @@
+//--------------------------------------------------------------
+// Cards
+//
+// Can't use settings for all things, like colors, since we have our own variables setup after settings is initialized.
+//--------------------------------------------------------------
+.card {
+	background-color: $athens-gray;
+
+	// Content.
+	p {
+		font-size: rem-calc(16);
+	} // p
+
+	// Make sure images don't distort.
+	img {
+		height: auto;
+		width: 100%;
+	} // img
+} // .card

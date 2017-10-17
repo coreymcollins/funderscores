@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// Site Header Navigation
+//--------------------------------------------------------------
+.navigation-menu {
+
+	@include breakpoint(large down) {
+		background-color: $white;
+	    padding: rem-calc($global-padding, 16);
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint(large down) {
+			text-align: center;
+		}
+	} // ul
+
+	li {
+
+		@include breakpoint(large down) {
+			margin-bottom: rem-calc($global-margin, 16);
+		}
+
+		@include breakpoint(large) {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		&:not(:last-child) {
+
+			@include breakpoint(large) {
+				margin-right: rem-calc($global-margin, 16);
+			}
+		} // &:not(:last-child)
+	} // li
+
+	// Remove margins on buttons in menus.
+	.button {
+		margin-bottom: 0;
+	} // .button
+
+	// Link colors.
+	a {
+
+		@include breakpoint(large down) {
+			color: $black;
+		}
+
+		@include breakpoint(large) {
+			color: $white;
+		}
+
+		// Keep button colors white on medium screens.
+		&.button {
+
+			@include breakpoint(large down) {
+				color: $white;
+			}
+		} // &.button
+	} // a
+} // .navigation-menu

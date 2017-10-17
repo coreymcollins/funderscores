@@ -1,0 +1,22 @@
+//--------------------------------------------------------------
+// Site Footer
+//--------------------------------------------------------------
+.site-footer {
+	padding-bottom: rem-calc(53);
+	padding-top: rem-calc(53);
+	text-align: center;
+
+	@include breakpoint(medium) {
+		text-align: unset;
+	}
+
+	// Some space!
+	.footer-logo {
+		display: block;
+		margin-bottom: rem-calc(23);
+
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+	} // .footer-logo
+} // .site-footer

@@ -1,0 +1,70 @@
+//--------------------------------------------------------------
+// Carousel
+//--------------------------------------------------------------
+.block-carousel {
+
+	// Images span full-width, and make sure they display well on small screens.
+	img {
+		width: 100%;
+
+		@include breakpoint(small down) {
+			height: rem-calc(235);
+			max-width: none;
+			width: auto;
+		}
+	} // img
+
+	// Orbit caption styles.
+	.orbit-caption {
+		background-color: transparent;
+		height: 100%;
+		padding-top: rem-calc(53);
+		text-align: center;
+
+		@include breakpoint(large) {
+			padding-top: rem-calc(172);
+		}
+	} // .orbit-caption
+
+	// Heading spacing.
+	h2 {
+		color: $white;
+		margin-bottom: rem-calc(11);
+	} // h2
+
+	// Content.
+	p {
+
+		@include breakpoint(large) {
+			font-size: rem-calc(24);
+		}
+	} // p
+
+	// Pagination.
+	.orbit-bullets {
+		bottom: rem-calc(6);
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
+
+		@include breakpoint(large) {
+			bottom: rem-calc(41);
+		}
+
+		// Style those dots!
+		button {
+
+			// Spacing.
+			&:not(:last-child) {
+				margin-right: rem-calc(14);
+			} // &:not(:last-child)
+
+			// Make the active dot nice and visible.
+			&.is-active {
+				background-color: $curious-blue;
+				height: rem-calc(16);
+				width: rem-calc(16);
+			} // &.is-active
+		} // button
+	} // .orbit-bullets
+} // .block-carousel

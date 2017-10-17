@@ -1,0 +1,30 @@
+//--------------------------------------------------------------
+// Colors. Using Foundation-based variable names instead of our usual.
+//--------------------------------------------------------------
+
+// Color variables.
+$athens-gray: #F4F6F8;
+$curious-blue: #3A99D8;
+$scorpion: #5B5B5B;
+$nevada: #686E76;
+
+// Theme colors.
+$theme-colors: (
+	athens-gray: $athens-gray,
+	curious-blue: $curious-blue,
+	nevada: $nevada,
+	scorpion: $scorpion,
+	white: $white,
+);
+
+// Theme color classes.
+@each $color, $color-name in $theme-colors {
+
+	.color-#{$color} {
+		color: $color-name;
+	}
+
+	.background-#{$color} {
+		background-color: $color-name;
+	}
+}

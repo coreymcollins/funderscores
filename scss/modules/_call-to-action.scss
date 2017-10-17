@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// Call To Action
+//--------------------------------------------------------------
+.block-call-to-action {
+	padding-bottom: rem-calc(56);
+	padding-top: rem-calc(56);
+	text-align: center;
+
+	@include breakpoint(medium) {
+		padding-bottom: rem-calc(86);
+		padding-top: rem-calc(86);
+		text-align: left;
+	}
+
+	// The input!
+	input[type="email"] {
+		border-radius: 5000px;
+		font-size: rem-calc(18);
+		height: rem-calc(73);
+		padding: rem-calc(8) rem-calc(35);
+
+		@include breakpoint(large) {
+			margin: 0;
+			padding: rem-calc(8) rem-calc(140) rem-calc(8) rem-calc(35);
+		}
+	} // input[type="email"]
+
+	// The button!
+	.button {
+		font-size: rem-calc(18);
+		height: rem-calc(73);
+		width: 100%;
+
+		@include breakpoint(large) {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+			margin: 0;
+			padding: 0 rem-calc(40);
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: auto;
+		}
+	} // .button
+
+	// The form container.
+	&__form {
+		position: relative;
+	} // &__form
+
+	// The content container.
+	&__content {
+		margin-bottom: rem-calc(37);
+
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+	} // &__content
+
+	// Heading.
+	h2 {
+		margin-bottom: rem-calc(13);
+	} // h2
+} // .block-call-to-action

@@ -1,0 +1,31 @@
+//--------------------------------------------------------------
+// Fifty-Fifty Block
+//--------------------------------------------------------------
+
+// Adjust content positioning.
+.block-fifty-fifty {
+
+	// Content position.
+	&__content {
+		order: 1;
+
+		@include breakpoint(medium) {
+			order: unset;
+			padding-top: rem-calc(50);
+		}
+	} // &__content
+
+	// Image centering.
+	&__image {
+		margin-top: rem-calc(20);
+		order: 2;
+		text-align: center;
+
+		@include breakpoint(medium) {
+			margin-top: 0;
+			order: unset;
+			text-align: unset;
+		}
+	}
+} // .block-fifty-fifty__image\
+

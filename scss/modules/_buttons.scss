@@ -1,0 +1,26 @@
+//--------------------------------------------------------------
+// Buttons
+//--------------------------------------------------------------
+.button {
+	border-radius: $button-radius;
+
+	// Hollow buttons.
+	&.hollow {
+		background-color: rgba($black, 0.07);
+		border-color: $white;
+		color: $white;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba($black, 0.14);
+			border-color: $white;
+			color: $white;
+		} // &:hover, &:active, &:focus
+	} // &.hollow
+} // .button
+
+// Burger icon.
+.hamburger {
+	@include hamburger($white, $white, rem-calc(22, 16), rem-calc(16, 16), rem-calc(3, 16));
+} // .hamburger
